@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01AjaxWstep", "P01AjaxWste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03AplikacjaZawodnicy", "P03AplikacjaZawodnicy\P03AplikacjaZawodnicy.csproj", "{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04APlikacjaZawodnicy.Test", "P04APlikacjaZawodnicy.Test\P04APlikacjaZawodnicy.Test.csproj", "{AC86256E-C6DC-4044-9298-9CE65382E362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05Zawodnicy.API", "P05Zawodnicy.API\P05Zawodnicy.API.csproj", "{5F454D09-0A08-411F-87CA-6B460B3B5410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06Zawodnicy.API.Test", "P06Zawodnicy.API.Test\P06Zawodnicy.API.Test.csproj", "{8032B5A0-7EEB-41DE-93EB-CC81E840314B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC86256E-C6DC-4044-9298-9CE65382E362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC86256E-C6DC-4044-9298-9CE65382E362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC86256E-C6DC-4044-9298-9CE65382E362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC86256E-C6DC-4044-9298-9CE65382E362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F454D09-0A08-411F-87CA-6B460B3B5410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F454D09-0A08-411F-87CA-6B460B3B5410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F454D09-0A08-411F-87CA-6B460B3B5410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F454D09-0A08-411F-87CA-6B460B3B5410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8032B5A0-7EEB-41DE-93EB-CC81E840314B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8032B5A0-7EEB-41DE-93EB-CC81E840314B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8032B5A0-7EEB-41DE-93EB-CC81E840314B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8032B5A0-7EEB-41DE-93EB-CC81E840314B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

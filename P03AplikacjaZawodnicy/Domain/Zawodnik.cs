@@ -34,8 +34,16 @@ namespace P02AplikacjaZawodnicy.Domain
                 if (Wzrost == null || Waga == null)
                     return 0;
 
+                int a = ObliczeniePomocnicznie();
+
                 return (int)Waga / Math.Pow((int)Wzrost / 100.0, 2);
             }
+        }
+
+        private int ObliczeniePomocnicznie()
+        {
+            int a = 5 + 6;
+            return a;
         }
 
         //public string DataSformatowana

@@ -18,6 +18,18 @@ function szukajDane() {
 
                 var idTrenera= $(this).data("id");
 
+                $.ajax({
+                    method: "GET",
+                    url: "TrenerzyAPI.aspx",
+                    data: { idTrenera: idTrenera }
+                })
+                    .done(function (msg) {
+
+                        $(".col-md-12").prepend(msg);
+
+
+                    });
+
 
             });
 

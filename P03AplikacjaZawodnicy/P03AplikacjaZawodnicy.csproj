@@ -120,6 +120,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Domain\GrupaKraj.cs" />
+    <Compile Include="Domain\Trener.cs" />
     <Compile Include="Domain\ZawodnicyResult.cs" />
     <Compile Include="Domain\Zawodnik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +129,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelBazy.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\TrenerzyRepository.cs" />
     <Compile Include="Repositories\ZawodnicyRepository.cs" />
     <Compile Include="SzczegolyZawodnika.aspx.cs">
       <DependentUpon>SzczegolyZawodnika.aspx</DependentUpon>

@@ -11,7 +11,14 @@ namespace P03AplikacjaZawodnicy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string idTreneraS = Request["idTrenera"];
 
+            int id = Convert.ToInt32(idTreneraS);
+
+
+
+            //txtImie.Text = 
+        
         }
     }
 }

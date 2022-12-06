@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P03AplikacjaZawodnicy.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +16,12 @@ namespace P03AplikacjaZawodnicy
 
             int id = Convert.ToInt32(idTreneraS);
 
+            TrenerzyRepository tr = new TrenerzyRepository();
 
+            var trener = tr.PodajTrenera(id);
 
-            //txtImie.Text = 
+            txtImie.Text = trener.Imie;
+            txtNazwisko.Text = trener.Nazwisko;
         
         }
     }

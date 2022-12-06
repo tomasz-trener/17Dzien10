@@ -61,7 +61,8 @@ namespace P02AplikacjaZawodnicy.Repositories
                 Kraj = zawodnikDb.kraj,
                 Wzrost = zawodnikDb.wzrost,
                 Waga = zawodnikDb.waga,
-                DataUrodzenia = zawodnikDb.data_ur
+                DataUrodzenia = zawodnikDb.data_ur,
+                TrenerImieNazwisko = zawodnikDb?.TrenerDB?.imie_t + " " + zawodnikDb?.TrenerDB?.nazwisko_t
             };
         
 

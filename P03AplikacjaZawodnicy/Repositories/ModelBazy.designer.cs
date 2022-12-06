@@ -30,6 +30,9 @@ namespace P03AplikacjaZawodnicy.Repositories
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertTrenerDB(TrenerDB instance);
+    partial void UpdateTrenerDB(TrenerDB instance);
+    partial void DeleteTrenerDB(TrenerDB instance);
     partial void InsertZawodnikDB(ZawodnikDB instance);
     partial void UpdateZawodnikDB(ZawodnikDB instance);
     partial void DeleteZawodnikDB(ZawodnikDB instance);
@@ -65,12 +68,182 @@ namespace P03AplikacjaZawodnicy.Repositories
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<TrenerDB> TrenerDB
+		{
+			get
+			{
+				return this.GetTable<TrenerDB>();
+			}
+		}
+		
 		public System.Data.Linq.Table<ZawodnikDB> ZawodnikDB
 		{
 			get
 			{
 				return this.GetTable<ZawodnikDB>();
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.trenerzy")]
+	public partial class TrenerDB : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id_trenera;
+		
+		private string _imie_t;
+		
+		private string _nazwisko_t;
+		
+		private System.Nullable<System.DateTime> _data_ur_t;
+		
+		private EntitySet<ZawodnikDB> _ZawodnikDB;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onid_treneraChanging(int value);
+    partial void Onid_treneraChanged();
+    partial void Onimie_tChanging(string value);
+    partial void Onimie_tChanged();
+    partial void Onnazwisko_tChanging(string value);
+    partial void Onnazwisko_tChanged();
+    partial void Ondata_ur_tChanging(System.Nullable<System.DateTime> value);
+    partial void Ondata_ur_tChanged();
+    #endregion
+		
+		public TrenerDB()
+		{
+			this._ZawodnikDB = new EntitySet<ZawodnikDB>(new Action<ZawodnikDB>(this.attach_ZawodnikDB), new Action<ZawodnikDB>(this.detach_ZawodnikDB));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_trenera", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id_trenera
+		{
+			get
+			{
+				return this._id_trenera;
+			}
+			set
+			{
+				if ((this._id_trenera != value))
+				{
+					this.Onid_treneraChanging(value);
+					this.SendPropertyChanging();
+					this._id_trenera = value;
+					this.SendPropertyChanged("id_trenera");
+					this.Onid_treneraChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imie_t", DbType="VarChar(255)")]
+		public string imie_t
+		{
+			get
+			{
+				return this._imie_t;
+			}
+			set
+			{
+				if ((this._imie_t != value))
+				{
+					this.Onimie_tChanging(value);
+					this.SendPropertyChanging();
+					this._imie_t = value;
+					this.SendPropertyChanged("imie_t");
+					this.Onimie_tChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nazwisko_t", DbType="VarChar(255)")]
+		public string nazwisko_t
+		{
+			get
+			{
+				return this._nazwisko_t;
+			}
+			set
+			{
+				if ((this._nazwisko_t != value))
+				{
+					this.Onnazwisko_tChanging(value);
+					this.SendPropertyChanging();
+					this._nazwisko_t = value;
+					this.SendPropertyChanged("nazwisko_t");
+					this.Onnazwisko_tChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_data_ur_t", DbType="DateTime")]
+		public System.Nullable<System.DateTime> data_ur_t
+		{
+			get
+			{
+				return this._data_ur_t;
+			}
+			set
+			{
+				if ((this._data_ur_t != value))
+				{
+					this.Ondata_ur_tChanging(value);
+					this.SendPropertyChanging();
+					this._data_ur_t = value;
+					this.SendPropertyChanged("data_ur_t");
+					this.Ondata_ur_tChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="trenerzy_zawodnicy", Storage="_ZawodnikDB", ThisKey="id_trenera", OtherKey="id_trenera")]
+		public EntitySet<ZawodnikDB> ZawodnikDB
+		{
+			get
+			{
+				return this._ZawodnikDB;
+			}
+			set
+			{
+				this._ZawodnikDB.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_ZawodnikDB(ZawodnikDB entity)
+		{
+			this.SendPropertyChanging();
+			entity.TrenerDB = this;
+		}
+		
+		private void detach_ZawodnikDB(ZawodnikDB entity)
+		{
+			this.SendPropertyChanging();
+			entity.TrenerDB = null;
 		}
 	}
 	
@@ -96,6 +269,8 @@ namespace P03AplikacjaZawodnicy.Repositories
 		
 		private System.Nullable<int> _waga;
 		
+		private EntityRef<TrenerDB> _TrenerDB;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -120,6 +295,7 @@ namespace P03AplikacjaZawodnicy.Repositories
 		
 		public ZawodnikDB()
 		{
+			this._TrenerDB = default(EntityRef<TrenerDB>);
 			OnCreated();
 		}
 		
@@ -154,6 +330,10 @@ namespace P03AplikacjaZawodnicy.Repositories
 			{
 				if ((this._id_trenera != value))
 				{
+					if (this._TrenerDB.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.Onid_treneraChanging(value);
 					this.SendPropertyChanging();
 					this._id_trenera = value;
@@ -279,6 +459,40 @@ namespace P03AplikacjaZawodnicy.Repositories
 					this._waga = value;
 					this.SendPropertyChanged("waga");
 					this.OnwagaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="trenerzy_zawodnicy", Storage="_TrenerDB", ThisKey="id_trenera", OtherKey="id_trenera", IsForeignKey=true)]
+		public TrenerDB TrenerDB
+		{
+			get
+			{
+				return this._TrenerDB.Entity;
+			}
+			set
+			{
+				TrenerDB previousValue = this._TrenerDB.Entity;
+				if (((previousValue != value) 
+							|| (this._TrenerDB.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TrenerDB.Entity = null;
+						previousValue.ZawodnikDB.Remove(this);
+					}
+					this._TrenerDB.Entity = value;
+					if ((value != null))
+					{
+						value.ZawodnikDB.Add(this);
+						this._id_trenera = value.id_trenera;
+					}
+					else
+					{
+						this._id_trenera = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TrenerDB");
 				}
 			}
 		}

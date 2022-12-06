@@ -15,7 +15,7 @@ namespace P03AplikacjaZawodnicy
         public Zawodnik[] Zawodnicy;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
 
 
             string filtr = Request["filtr"];

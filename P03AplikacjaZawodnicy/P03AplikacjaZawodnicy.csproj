@@ -107,6 +107,7 @@
     <Content Include="JsLib\jquery-ui.structure.min.css" />
     <Content Include="JsLib\jquery-ui.theme.min.css" />
     <Content Include="SzczegolyZawodnika.aspx" />
+    <Content Include="TrenerzyAPI.aspx" />
     <Content Include="Web.config" />
     <Content Include="ZawodnicyAPI.aspx" />
   </ItemGroup>
@@ -134,6 +135,13 @@
     </Compile>
     <Compile Include="SzczegolyZawodnika.aspx.designer.cs">
       <DependentUpon>SzczegolyZawodnika.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrenerzyAPI.aspx.cs">
+      <DependentUpon>TrenerzyAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrenerzyAPI.aspx.designer.cs">
+      <DependentUpon>TrenerzyAPI.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZawodnicyAPI.aspx.cs">
       <DependentUpon>ZawodnicyAPI.aspx</DependentUpon>

@@ -12,7 +12,15 @@ function szukajDane() {
     })
         .done(function (msg) {
 
-            $("#dvDane").html(msg)
+            $("#dvDane").html(msg);
+
+            $(".td_trener").click(function () {
+
+                var idTrenera= $(this).data("id");
+
+
+            });
+
 
         });
 }

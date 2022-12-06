@@ -15,6 +15,7 @@
                         Data ur
                       </th>
                       <th>Flaga</th>
+                      <th>Trener</th>
                     </thead>
                     <tbody>
                       
@@ -42,6 +43,9 @@
                                     <td><%= z.DataSformatowana %></td>
 
                                     <td><img style="width:30px;height:30px" src="Images/<%= z.Kraj.ToLower() %>.jpg" /></td>
+
+                                    <td data-id="<%=z.Id_trenera %>" class="td_trener"><%= z.TrenerImieNazwisko %></td>
+
                                 </tr>
 
                           <% }

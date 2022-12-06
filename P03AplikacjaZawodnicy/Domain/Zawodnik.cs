@@ -18,6 +18,7 @@ namespace P02AplikacjaZawodnicy.Domain
         public int? Wzrost { get; set; }
         public int? Waga { get; set; }
 
+        public string TrenerImieNazwisko { get; set; }
         public string ImieNazwisko
         {
             get

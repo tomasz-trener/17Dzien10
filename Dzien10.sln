@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01AjaxWstep", "P01AjaxWstep\P01AjaxWstep.csproj", "{806FF6E4-A49E-4CA3-A002-41D1C0F319F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03AplikacjaZawodnicy", "P03AplikacjaZawodnicy\P03AplikacjaZawodnicy.csproj", "{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{806FF6E4-A49E-4CA3-A002-41D1C0F319F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{806FF6E4-A49E-4CA3-A002-41D1C0F319F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{806FF6E4-A49E-4CA3-A002-41D1C0F319F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6857A04-AE38-4129-ABEA-7E0AD7F0C21A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,6 +5,7 @@
                       <th>
                         Imie i nazwisko
                       </th>
+                        <th>BMI</th>
                       <th>
                         Kraj
                       </th>
@@ -25,6 +26,7 @@
 
                                 <tr>
                                     <td><a href="SzczegolyZawodnika.aspx?id=<%= z.Id_zawodnika %>"><%= z.ImieNazwisko %></a> </td>
+                                    <td><%=string.Format("{0:0.00}",z.BMI) %></td>
                                     <td><%= z.Kraj %></td>
                                                                 
                                     <td>

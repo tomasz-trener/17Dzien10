@@ -27,6 +27,17 @@ namespace P02AplikacjaZawodnicy.Domain
             }
         }
 
+        public double BMI
+        {
+            get
+            {
+                if (Wzrost == null || Waga == null)
+                    return 0;
+
+                return (int)Waga / Math.Pow((int)Wzrost / 100.0, 2);
+            }
+        }
+
         //public string DataSformatowana
         //{
         //    get
